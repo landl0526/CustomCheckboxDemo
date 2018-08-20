@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomCheckboxDemo"
+             x:Class="CustomCheckboxDemo.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <local:Checkbox x:Name="asd" 
+                                        VerticalOptions="Center"  
+                                        HorizontalOptions="StartAndExpand" 
+                                        OutlineColor="{DynamicResource PrimaryTextColor}"
+                                        CheckedCommandParameter="{Binding}" 
+                                        CheckedCommand="{Binding HandleButtonCommand}"  
+                                        CheckedOutlineColor="{DynamicResource PrimaryTextColor}" 
+                                        CheckColor="{DynamicResource PrimaryColor}"
+                                        Margin="-10,-16,-10,-10"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
